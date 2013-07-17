@@ -26,8 +26,8 @@
         "name": "network_load",
         "priority": 50,
         "args": {
-          "recv_format": "∨{value:>8}",
-          "sent_format": " ∧{value:>8}"
+          "recv_format": "↓{value:>8}",
+          "sent_format": " ↑{value:>8}"
         }
       },
       {
