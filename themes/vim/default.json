@@ -10,8 +10,18 @@
       "args": { "gradient": true },
       "after": "%"
     },
+    "rvm_current": {
+      "args": { "only_ruby": true }
+    },
+    "file_directory": {
+      "args": {
+        "shorten_user": true,
+        "shorten_cwd": true,
+        "shorten_home": true
+      }
+    },
     "line_current_symbol": {
-      "contents": ""
+      "contents": " "
     }
   },
   "segments": {
@@ -51,7 +61,32 @@
       },
       {
         "name": "modified_indicator",
-        "before": " "
+        "before": " ",
+        "draw_soft_divider": true
+      },
+      {
+        "module" : "linepower.segments",
+        "name": "tagbar_currenttag",
+        "priority": 10,
+        "exclude_modes": ["nc"],
+        "draw_hard_divider": false,
+        "draw_soft_divider": false
+      },
+      {
+        "module" : "linepower.segments",
+        "name": "asynccommand",
+        "priority": 60,
+        "exclude_modes": ["nc"],
+        "draw_hard_divider": false,
+        "draw_soft_divider": false
+      },
+      {
+        "module" : "linepower.segments",
+        "name": "syntastic",
+        "priority": 50,
+        "exclude_modes": ["nc"],
+        "draw_hard_divider": false,
+        "draw_soft_divider": false
       },
       {
         "type": "string",
@@ -66,7 +101,7 @@
         "name": "file_format",
         "draw_soft_divider": false,
         "exclude_modes": ["nc"],
-        "priority": 60
+        "priority": 10
       },
       {
         "name": "file_encoding",
@@ -79,8 +114,16 @@
         "priority": 60
       },
       {
+        "module" : "linepower.segments",
+        "name": "rvm_current",
+        "draw_soft_divider": true,
+        "draw_hard_divider": true,
+        "exclude_modes": ["nc"],
+        "priority": 20
+      },
+      {
         "name": "line_percent",
-        "priority": 50,
+        "priority": 30,
         "width": 4,
         "align": "r"
       },
