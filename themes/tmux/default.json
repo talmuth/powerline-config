@@ -12,7 +12,14 @@
         "name": "weather",
         "priority": 50,
         "args": {
-          "location_query": "Baryshevka, Ukraine"
+          "location_query": "Baryshevka, Ukraine",
+          "temp_format": "{temp:.0f}℃",
+          "icons": {
+            "rainy": "⍋",
+            "sunny": "⎈",
+            "not_available": "⁇",
+            "blustery": "⌦"
+          }
         }
       }
     ],
