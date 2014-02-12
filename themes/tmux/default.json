@@ -1,5 +1,16 @@
 {
   "default_module": "powerline.segments.common",
+  "segment_data": {
+    "external_ip": {
+      "before": "📡  "
+    },
+    "battery": {
+      "before": "🔋  "
+    },
+    "date": {
+      "before": "📆  "
+    }
+  },
   "segments": {
     "left": [
       {
@@ -7,23 +18,20 @@
         "args": {
           "exclude_domain": true
         }
-      },
-      {
-        "name": "weather",
-        "priority": 50,
-        "args": {
-          "location_query": "Baryshevka, Ukraine",
-          "temp_format": "{temp:.0f}℃",
-          "icons": {
-            "rainy": "⍋",
-            "sunny": "⎈",
-            "not_available": "⁇",
-            "blustery": "⌦"
-          }
-        }
       }
     ],
     "right": [
+      {
+        "name": "external_ip",
+        "priority": 50
+      },
+      {
+        "name": "battery",
+        "priority": 60,
+        "args": {
+          "steps": 100
+        }
+      },
       {
         "name": "system_load",
         "priority": 50
