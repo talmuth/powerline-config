@@ -22,19 +22,11 @@
     ],
     "right": [
       {
-        "name": "external_ip",
-        "priority": 50
-      },
-      {
         "name": "battery",
         "priority": 60,
         "args": {
           "steps": 100
         }
-      },
-      {
-        "name": "system_load",
-        "priority": 50
       },
       {
         "name": "date",
